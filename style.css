@@ -5,6 +5,7 @@
     --lightGray: #c3c3c3;
     --darkGray: #3e3e3e;
     --background: white;
+    --marker: #cc4444
 }
 
 .dark-mode {
@@ -12,8 +13,32 @@
     --darkGray: #c3c3c3;
     --background: #2e2e2e;
 }
+#now {
+    position: absolute;
+    min-width: 19.4%;
+    min-height: 3px;
+    background-color : var(--marker);
+    -webkit-transition:top .5s ease-in-out;
+    -moz-transition:top .5s ease-in-out;
+    -ms-transition:top .5s ease-in-out;
+    -o-transition:top .5s ease-in-out;
+    transition:top .5s ease-in-out;
+    z-index: 49;
+}
+#now::before{
+    content: ' ';
+    position: absolute;
+    top:-3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: var(--marker);
+}
 body {
     background-color: var(--background) !important;
+}
+td{
+    z-index:50;
 }
 #DivBody{
     background-color: var(--background)
