@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --lightGray: #c3c3c3;
+    --darkGray: #3e3e3e;
+    --background: white;
+    --disabled: #c1c1c1
+}
+
+.dark-mode {
+    --lightGray: #5d5d5d;
+    --darkGray: #c3c3c3;
+    --background: #2e2e2e;
+    --disabled: #5c5c5c
+}
+
+body{
+    background-color: var(--background);
+    color:var(--darkGray)
+}
+
+select, input {
+    background-color: var(--background);
+}
+input {
+    accent-color:  var(--background);
+}
+select:disabled,
+select[disabled]{
+    background-color: var(--disabled) !important;
+}
+
+.container {
+    min-width: 15rem;
+    padding: .5rem;
+}

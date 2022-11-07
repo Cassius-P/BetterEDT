@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BetterEDT</title>
+    <link href="tailwind.css" rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="flex flex-col p-4 text-sm container">
+        <label class="p-2 w-full flex justify-between">
+            Theme automatique
+            <input type="checkbox" id="auto" checked>
+        </label>
+        <label class="p-2 w-full flex justify-between">
+            Theme
+            <select disabled id="select" class="text-sm  pl-2 pr-4 py-2 rounded-md w-24">
+                <option value="light">Clair</option>
+                <option value="dark">Sombre</option>
+            </select>
+        </label>
+    </div>
+</body>
+</html>

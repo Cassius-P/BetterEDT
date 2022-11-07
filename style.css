@@ -1,0 +1,164 @@
+
+
+
+:root {
+    --lightGray: #c3c3c3;
+    --darkGray: #3e3e3e;
+    --background: white;
+}
+
+.dark-mode {
+    --lightGray: #5d5d5d;
+    --darkGray: #c3c3c3;
+    --background: #2e2e2e;
+}
+body {
+    background-color: var(--background) !important;
+}
+#DivBody{
+    background-color: var(--background)
+}
+.Jour {
+    background-color: var(--background) !important;
+    border-bottom: 2px solid var(--lightGray) !important;
+    border-right: none !important;
+    border-left: none !important;
+}
+.Jour:first-of-type{
+    border-left: none !important;
+}
+.Jour > img {
+    display: none;
+}
+.BJour > img {
+    display: none;
+}
+.BJour {
+    border-left: none !important;
+    border-right: 2px solid var(--lightGray) !important;
+}
+.TCase:has( .TCJour){
+    justify-content: center;
+    display: flex;
+}
+.TCJour{
+    background-color: var(--background) !important;
+    color: var(--darkGray) !important;
+    font-weight: 600 !important;
+}
+.THeure {
+    background-color: var(--background) !important;
+    border-top: 2px solid var(--lightGray) !important;
+    font-size: inherit !important;
+    padding-left: 0.4rem;
+    color: var(--lightGray);
+}
+
+.innerCase{
+    border-width: 5px !important;
+    border-top : none !important;
+    border-bottom: none !important;
+    border-right:none !important;
+}
+.Case:has( > div.innerCase){
+    border-top-right-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+    opacity: .75;
+    margin-top: 3px;
+    width: 19% !important;
+}
+.innerCase > img {
+    display: none !important;
+}
+.innerCase tbody {
+    padding: 0 .4rem;
+}
+.CaseOmbre {
+    display: none !important;
+}
+.TCase {
+    border: none;
+}
+.TCase > tbody {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100%;
+}
+.TCase > tbody > tr, .TCase > tbody > tr >td {
+    border : none !important;
+}
+tr:has(> td.TChdeb) {
+    justify-content: space-between;
+    display: flex;
+    padding: .4rem 0;
+}
+.TChdeb {
+    font-weight: 600;
+}
+tbody > tr:has(> td.TCase) {
+    order:2;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+}
+.TCProf {
+    display: flex;
+    height: 100% !important;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.TCProf span {
+    display: none;
+}
+tbody > tr:has(> td.TCProf) {
+    order:3;
+    flex: 1 1 auto;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: .4rem 0;
+}
+#butLeft, #butRight, #butUp {
+    display: flex;
+}
+#butLeft {
+    justify-content: flex-start;
+}
+#butRight {
+    justify-content: flex-end;
+}
+#butUp {
+    justify-content: center;
+}
+#butLeft img, #butRight img, #butUp img{
+    content: url("https://www.iconpacks.net/icons/2/free-arrow-left-icon-3099-thumb.png") !important;
+    width:auto !important;
+    padding: .4rem;
+    height: calc(100% - .8rem) !important;
+}
+#butRight img {
+    transform:rotate(180deg);
+}
+#butUp img {
+    transform:rotate(90deg);
+}
+#butTeams {
+    display: none;
+}
+#btnPrint{
+    display: none;
+}
+
+#I_Du_MasterCal{
+    background-color: white !important;
+    width: 65% !important;
+    left: 120% !important;
+}
+.I_Du_LibMois {
+    color: var(--darkGray) !important;
+}
+.Presence {
+    display: none;
+}
+.Teams {
+    display: none;
+}
