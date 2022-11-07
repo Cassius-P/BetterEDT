@@ -1,6 +1,12 @@
 {
+  "scripts": {
+    "compile": "node compiler.js"
+  },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.3",
+    "adm-zip": "^0.5.9",
+    "archiver": "^5.3.1",
+    "fs": "^0.0.1-security",
     "tailwindcss": "^3.2.2"
   }
 }

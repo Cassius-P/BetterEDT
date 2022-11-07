@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
   "name": "BetterEDT",
-  "version": "1.0",
+  "version": "1.1.0",
 
-  "description": "Embellit l'emploir du temps du reseau CD",
+  "description": "Embellit l'emploi du temps du reseau CD",
   "permissions": [
     "storage",
     "tabs"
@@ -17,20 +17,20 @@
   "action": {
     "default_icon": "icons/edt.png",
     "default_title": "BetterEDT",
-    "default_popup": "popup.html"
+    "default_popup": "popup/popup.html"
   },
   "content_scripts": [
     {
       "matches": [
         "*://ws-edt-cd.wigorservices.net/*"
       ],
-      "css": ["style.css"],
-      "js": ["fetcher.js"],
+      "css": ["content/style.css"],
+      "js": ["content/fetcher.js"],
       "run_at": "document_end"
     }
   ],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "service/background.js"
   },
   "icons": {
     "16": "icons/edt16.png",
