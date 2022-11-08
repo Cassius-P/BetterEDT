@@ -8,12 +8,6 @@
     "storage",
     "tabs"
   ],
-  "host_permissions": [
-    "https://ws-edt-cd.wigorservices.net/"
-  ],
-  "optional_host_permissions": [
-    "*://*/*"
-  ],
   "action": {
     "default_icon": "icons/edt.png",
     "default_title": "BetterEDT",
