@@ -8,11 +8,13 @@ function handleError(error) {
     console.log(`Error: ${error}`);
 }
 
-function notifyBackgroundPage() {
-    const sending = chrome.runtime.sendMessage({
+ function notifyBackgroundPage() {
+    console.log("Sending message to SW")
+    chrome.runtime.sendMessage({
         from: 'content'
+    },  (response) => {
+         handleResponse(response)
     });
-    sending.then(handleResponse, handleError);
 }
 
 chrome.runtime.onMessage.addListener(
@@ -36,7 +38,6 @@ function updateTheme(theme){
         }
         console.log("Update " + wanted)
     }
-
     toggleDarkMode(wanted)
 }
 

@@ -4,7 +4,6 @@ let select = document.querySelector("#select");
 let storage = localStorage;
 let theme = storage.getItem('edtTheme');
 
-
 auto.addEventListener('change', (event) => {
     listener('auto', event)
 })
@@ -24,7 +23,6 @@ function listener(input, event) {
     if(input === 'select'){
         value = event.target.value;
     }
-    //alert(input +" -> Value :" + value)
     updateTheme(value);
 }
 
@@ -49,7 +47,6 @@ function updateTheme(wanted) {
         }
         console.log("Update " + wanted)
     }
-
     toggleDarkMode(wanted)
 }
 
@@ -59,7 +56,6 @@ function toggleDarkMode(wanted) {
     if(wanted === 'dark'){
         document.documentElement.classList.add('dark-mode')
     }
-
     if(wanted === 'light'){
         document.documentElement.classList.remove('dark-mode')
     }
@@ -75,7 +71,6 @@ function setInputs(value) {
         select.disabled = false;
         select.value = value
     }
-    //alert(value)
 }
 
 function setStorageTheme(theme){
@@ -89,8 +84,6 @@ function getStorageTheme(){
         theme = storage.getItem('edtTheme')
     }
     return theme;
-
-    //alert("Get " + theme)
 }
 
 function sendData(theme){
